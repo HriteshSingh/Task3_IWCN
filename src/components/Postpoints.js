@@ -78,7 +78,7 @@ const ApiPostComponent = () => {
        <b className='first-head'>Enter your phone number :</b> 
         <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
       </label>
-      <button onClick={postData}>Send POST Request</button>
+      <button onClick={postData} className={phoneNumber.length === 10 ? '' : 'disabled'} disabled={phoneNumber.length !== 10}>Send POST Request</button>
       </div>
 
       {/* Displaying success and error messages */}
